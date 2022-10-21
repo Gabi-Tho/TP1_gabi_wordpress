@@ -1,0 +1,22 @@
+.carrousel{
+    position: absolute;
+    left: 25vw;
+    top: 25vh;
+    width: 50vw;
+    height: 50vh;
+    background-color: grey; 
+    transform: scale(0);
+    transition: transform 1s;
+}
+.carrousel--ouvrir{
+    transform: scale(1);
+} 
+
+.btn_modaleFermer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
