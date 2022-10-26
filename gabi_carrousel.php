@@ -4,7 +4,7 @@
 * version 1.0.0
 */
 /*
-Plugin Name: em_carrousel
+Plugin Name: gabi_carrousel
 Version: 1.0.0
 */
 /*
