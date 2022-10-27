@@ -7,12 +7,15 @@
     /* ---------------------------------------- Les éléments du carrousel */
     /* Le conteneur principal du carrousel */
     let elmCarrousel = document.querySelector(".carrousel");
+    console.log(elmCarrousel);
     /* Bouton temporaire pour ouvrir le carrousel */
     let elmBtnModale = document.querySelector(".btn_modale");
+    console.log(elmBtnModale);
     /* Bouton de fermeture du carrousel  le X de fermeture */
     let elmBtnModaleFermer = document.querySelector(".btn_fermer");
     /* figure qui contiendra l'ensemble des images du carrousel */
     let elmCarrousel__figure = document.querySelector(".carrousel__figure");
+    console.log(elmCarrousel__figure);
     /* le formulaire qui contiendra l'ensemble des boutons radio */
     let elmCarrousel__form = document.querySelector(".carrousel__form");
   
@@ -20,6 +23,7 @@
     /* Le conteneur principal de la galerie */
     let elmGalerie = document.querySelector(".galerie");
     let elmGalerieImg = document.querySelectorAll(".galerie figure img");
+    console.log(elmGalerie);
   
     /* ----------------------------- Étape 1 parcourir les images de la galerie */
   
@@ -49,9 +53,11 @@
       // elmImg représente une image de la galerie */
       elmImg.dataset.index = index;
       let elmCarrousel__figure__img = document.createElement("img");
+      console.log(elmCarrousel__figure__img);
       elmCarrousel__figure__img.setAttribute("src", elmImg.getAttribute("src"));
       elmCarrousel__figure__img.classList.add("carrousel__figure__img");
       elmCarrousel__figure__img.dataset.index = index;
+      console.log(elmCarrousel__figure);
       elmCarrousel__figure.appendChild(elmCarrousel__figure__img);
     }
     /**
