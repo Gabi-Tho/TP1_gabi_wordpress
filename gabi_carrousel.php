@@ -19,8 +19,6 @@ wp_enqueue_scripts // le hook
 function gabi_enqueue()
 {
 
-    echo "gabi enqueue";
-
  $version_css = filemtime(plugin_dir_path(__FILE__) . "style.css");
  $version_js = filemtime(plugin_dir_path(__FILE__) . "js/carrousel.js");
 
@@ -40,7 +38,6 @@ add_action('wp_enqueue_scripts', 'gabi_enqueue');
 
 function genere_boite(){
 
-    echo "genere ma boite svp";
 
     $contenu = "
     <button class='btn_modale'>boîte modale</button>
