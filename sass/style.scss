@@ -40,7 +40,15 @@
   }
 
   .btn_gauche{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    width: 2rem;
+    height: 2rem;
     z-index: 3;
+    margin: 10px;
   }
   
   .carrousel__figure {
