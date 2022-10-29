@@ -34,7 +34,7 @@
   justify-content: center;
   position: absolute;
   right: 4px;
-  top: 4px;
+  top: 50%;
   width: 2rem;
   height: 2rem;
   z-index: 3;
