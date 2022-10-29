@@ -95,7 +95,10 @@
     elmBtnModaleDroite.addEventListener('mousedown',function(){
       for (let i = 0; i < elmCarrousel__figure.children.length; i++) {
         if(elmCarrousel__figure.children[i].classList.contains('carrousel__figure__img--activer')){
-          elmCarrousel__figure.children[0].classList.add('carrousel__figure__img--activer');
+          elmCarrousel__figure.children[0].classList.remove('carrousel__figure__img--activer');
+          if(i== 3){
+            elmCarrousel__figure.children[0].classList.add('carrousel__figure__img--activer');
+          }
         }else{
           elmCarrousel__figure.children[i+1].classList.add('carrousel__figure__img--activer');
           break;
@@ -107,7 +110,10 @@
     elmBtnModalGauche.addEventListener('mousedown',function(){
       for (let i = 0; i < elmCarrousel__figure.children.length; i++) {
         if(elmCarrousel__figure.children[i].classList.contains('carrousel__figure__img--activer')){
-          elmCarrousel__figure.children[0].classList.add('carrousel__figure__img--activer');
+          elmCarrousel__figure.children[0].classList.remove('carrousel__figure__img--activer');
+          if(i==3){
+            elmCarrousel__figure.children[3].classList.add('carrousel__figure__img--activer');
+          }
         }else{
           elmCarrousel__figure.children[i+1].classList.add('carrousel__figure__img--activer');
           break;

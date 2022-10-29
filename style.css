@@ -28,10 +28,22 @@
   z-index: 3;
 }
 
+.btn_droite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 2rem;
+  height: 2rem;
+  z-index: 3;
+}
+
 .carrousel__figure__img {
   display: block;
   position: absolute;
-  object-fit: cover;
+  object-fit: contain;
   top: 0;
   left: 0;
   width: 100%;
@@ -52,4 +64,8 @@
   display: flex;
   justify-content: center;
   margin: 1rem;
+}
+
+.btn_modale {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

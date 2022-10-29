@@ -41,18 +41,17 @@ function genere_boite(){
 
     $contenu = "
     <button class='btn_modale'>boîte modale</button>
+
     <div class='carrousel'>
-        <div>
-        <button class='btn_droite'> >> </button>
-        </div>
         <button class='btn_fermer'> + </button>
+        <button class='btn_droite'> >> </button>
 
         <figure class='carrousel__figure'></figure>
-        <div>
-        <button class='btn_gauche'> << BUTTTON? </button>
-        </div>
+
+        
         <form class='carrousel__form'></form>
-    </div>";
+        <button class='btn_gauche'> << </button>
+        </div>";
     return $contenu;
 }
 add_shortcode('gabi_carrousel', 'genere_boite'); 
