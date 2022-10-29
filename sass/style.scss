@@ -34,7 +34,7 @@
   .carrousel__figure__img {
     display: block;
     position: absolute;
-    object-fit: cover;
+    object-fit: contain;
     top: 0;
     left: 0;
     width: 100%;

@@ -10,7 +10,7 @@
     let elmBtnModale = document.querySelector(".btn_modale");
     let elmBtnModaleFermer = document.querySelector(".btn_fermer");
     let elmBtnModaleDroite = document.querySelector(".btn_droite");
-    let elmBtnModalGauche = docuemnt.querySelector(".btn_gauche");
+    let elmBtnModalGauche = document.querySelector(".btn_gauche");
     let elmCarrousel__figure = document.querySelector(".carrousel__figure");
 
     /* le formulaire qui contiendra l'ensemble des boutons radio */
