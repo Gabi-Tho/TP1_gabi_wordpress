@@ -38,7 +38,7 @@
 
         elmCarrousel__form.children[this.dataset.index].checked = true;
         dernierIndex = this.dataset.index;
-        
+
       });
     }
     /**
@@ -49,11 +49,9 @@
       // elmImg représente une image de la galerie */
       elmImg.dataset.index = index;
       let elmCarrousel__figure__img = document.createElement("img");
-      console.log(elmCarrousel__figure__img);
       elmCarrousel__figure__img.setAttribute("src", elmImg.getAttribute("src"));
       elmCarrousel__figure__img.classList.add("carrousel__figure__img");
       elmCarrousel__figure__img.dataset.index = index;
-      console.log(elmCarrousel__figure);
       elmCarrousel__figure.appendChild(elmCarrousel__figure__img);
     }
     /**
@@ -94,7 +92,17 @@
       elmCarrousel.classList.remove("carrousel--ouvrir");
     });
 
-
+    elmBtnModaleDroite.addEventListener('mousedown',function(){
+      for (let i = 0; i < elmCarrousel__figure.children.length; i++) {
+        if(elmCarrousel__figure.children[i].classList.contains('carrousel__figure__img--activer')){
+          elmCarrousel__figure.children[0].classList.add('carrousel__figure__img--activer');
+        }else{
+          elmCarrousel__figure.children[i+1].classList.add('carrousel__figure__img--activer');
+          break;
+        }
+        
+      }
+    })
 
 
   })();
