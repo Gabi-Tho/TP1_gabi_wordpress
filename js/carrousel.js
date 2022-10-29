@@ -11,6 +11,13 @@
     let elmBtnModaleFermer = document.querySelector(".btn_fermer");
     let elmBtnModaleDroite = document.querySelector(".btn_droite");
     let elmBtnModalGauche = document.querySelector(".btn_gauche");
+    console.log(elmBtnModalGauche);
+
+    elmBtnModalGauche.addEventListener("mousedown",function() {
+      console.log("left");
+    });
+
+
     let elmCarrousel__figure = document.querySelector(".carrousel__figure");
 
     /* le formulaire qui contiendra l'ensemble des boutons radio */
@@ -64,7 +71,7 @@
       elmCarrousel__form__radio.setAttribute("type", "radio");
       elmCarrousel__form__radio.dataset.index = index;
       index++;
-      elmCarrousel__form.appendChild(elmCarrousel__form__radio);
+      // elmCarrousel__form.appendChild(elmCarrousel__form__radio);
       /* ------------------------ écouteur sur radio pour afficher une nouvelle image */
       elmCarrousel__form__radio.addEventListener("mousedown", function () {
         console.log(this.dataset.index);
@@ -93,34 +100,19 @@
     });
 
     elmBtnModaleDroite.addEventListener('mousedown',function(){
+      console.log('click droite');
       for (let i = 0; i < elmCarrousel__figure.children.length; i++) {
         if(elmCarrousel__figure.children[i].classList.contains('carrousel__figure__img--activer')){
-          elmCarrousel__figure.children[0].classList.remove('carrousel__figure__img--activer');
-          if(i== 3){
+          elmCarrousel__figure.children[i].classList.remove('carrousel__figure__img--activer');
+          if(i == 3){
             elmCarrousel__figure.children[0].classList.add('carrousel__figure__img--activer');
-          }
-        }else{
-          elmCarrousel__figure.children[i+1].classList.add('carrousel__figure__img--activer');
-          break;
+          }else{
+            elmCarrousel__figure.children[i+1].classList.add('carrousel__figure__img--activer');
+            break;
+        }
         }
         
       }
     })
-
-    elmBtnModalGauche.addEventListener('mousedown',function(){
-      for (let i = 0; i < elmCarrousel__figure.children.length; i++) {
-        if(elmCarrousel__figure.children[i].classList.contains('carrousel__figure__img--activer')){
-          elmCarrousel__figure.children[0].classList.remove('carrousel__figure__img--activer');
-          if(i==3){
-            elmCarrousel__figure.children[3].classList.add('carrousel__figure__img--activer');
-          }
-        }else{
-          elmCarrousel__figure.children[i+1].classList.add('carrousel__figure__img--activer');
-          break;
-        }
-        
-      }
-    })
-
 
   })();
