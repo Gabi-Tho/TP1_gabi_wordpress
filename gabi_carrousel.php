@@ -43,7 +43,7 @@ function genere_boite(){
     <button class='btn_modale'>boîte modale</button>
 
     <div class='carrousel'>
-        <button class='btn_fermer'> + </button>
+        <button class='btn_fermer'> X </button>
         <button class='btn_droite'> >> </button>
         <figure class='carrousel__figure'></figure>
         <button class='btn_gauche'> << </button>
