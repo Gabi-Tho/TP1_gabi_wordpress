@@ -5,17 +5,14 @@
     let dernierIndex = -1;
   
     /* ---------------------------------------- Les éléments du carrousel */
-    /* Le conteneur principal du carrousel */
+
     let elmCarrousel = document.querySelector(".carrousel");
-    console.log(elmCarrousel);
-    /* Bouton temporaire pour ouvrir le carrousel */
     let elmBtnModale = document.querySelector(".btn_modale");
-    console.log(elmBtnModale);
-    /* Bouton de fermeture du carrousel  le X de fermeture */
     let elmBtnModaleFermer = document.querySelector(".btn_fermer");
-    /* figure qui contiendra l'ensemble des images du carrousel */
+    let elmBtnModaleDroite = document.querySelector(".btn_droite");
+    let elmBtnModalGauche = docuemnt.querySelector(".btn_gauche");
     let elmCarrousel__figure = document.querySelector(".carrousel__figure");
-    console.log(elmCarrousel__figure);
+
     /* le formulaire qui contiendra l'ensemble des boutons radio */
     let elmCarrousel__form = document.querySelector(".carrousel__form");
   
@@ -23,26 +20,25 @@
     /* Le conteneur principal de la galerie */
     let elmGalerie = document.querySelector(".galerie");
     let elmGalerieImg = document.querySelectorAll(".galerie figure img");
-    console.log(elmGalerie);
   
     /* ----------------------------- Étape 1 parcourir les images de la galerie */
   
     for (const elmImg of elmGalerieImg) {
-      console.log(elmImg.getAttribute("src"));
-  
+
       ajouter_img_carrousel(elmImg);
       ajouter_radio_carrousel();
       /* écouteur sur les images de la galerie */
       elmImg.addEventListener("mousedown", function () {
-        console.log("galerie");
-        console.log("elmImg.dataset.index" + this.dataset.index);
+
+
         elmCarrousel.classList.add("carrousel--ouvrir");
         elmCarrousel__figure.children[this.dataset.index].classList.add(
           "carrousel__figure__img--activer"
         );
+
         elmCarrousel__form.children[this.dataset.index].checked = true;
-        console.log(index);
         dernierIndex = this.dataset.index;
+        
       });
     }
     /**
@@ -97,4 +93,8 @@
     elmBtnModaleFermer.addEventListener("mousedown", function () {
       elmCarrousel.classList.remove("carrousel--ouvrir");
     });
+
+
+
+
   })();
