@@ -11,11 +11,7 @@
     z-index: 1;
   }
   
-  .carrousel--ouvrir {
-    transform: scale(1);
-    opacity: 1;
-  }
-  
+  // ============= les buttons ===============//
   .btn_fermer {
     display: flex;
     align-items: center;
@@ -62,8 +58,23 @@
     border: none;
     border-radius: 20%;
   }
-  
-  .carrousel__figure {
+
+  .btn_modale{
+    display: none;
+  }
+
+  //============ les buttons fin ============//
+
+// ================== les images =============//
+
+  .carrousel__form {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
   }
   
   .carrousel__figure__img {
@@ -78,20 +89,17 @@
     transition: opacity 1s;
     //z-index: 2;
   }
+
+  
   .carrousel__figure__img--activer {
     opacity: 1;
   }
-  
-  .carrousel__form {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
-  }
 
-  .btn_modale{
-    display: none;
+    
+  .carrousel--ouvrir {
+    transform: scale(1);
+    opacity: 1;
   }
+  
+// ================== les images fin =============//
+
